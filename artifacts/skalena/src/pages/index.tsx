@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import { Navbar } from "@/components/navbar";
 import { Footer } from "@/components/footer";
 import { HeroCanvas } from "@/components/hero-canvas";
-import { Code2, Layers, Cpu, ShieldCheck, Zap, Globe, ArrowRight, CheckCircle2 } from "lucide-react";
+import { Code2, Layers, Cpu, ShieldCheck, Zap, Globe, ArrowRight, CheckCircle2, UserCheck, Settings, MessageSquare, BarChart3, BrainCircuit } from "lucide-react";
 
 const GREEN = "#0cfa64";
 
@@ -221,9 +221,9 @@ export default function IndexPage() {
         </div>
       </section>
 
-      {/* ── SERVIÇOS ── */}
+      {/* ── SERVIÇOS BENTO ── */}
       <section id="servicos" className="py-28 max-w-7xl mx-auto px-6">
-        <FadeUp className="text-center mb-16">
+        <FadeUp className="text-center mb-14">
           <SectionLabel>Serviços</SectionLabel>
           <h2
             className="font-extrabold"
@@ -232,33 +232,114 @@ export default function IndexPage() {
             O que fazemos
           </h2>
           <p className="text-white/45 mt-4 max-w-xl mx-auto text-base">
-            Soluções tecnológicas que transformam a forma como sua empresa opera e cresce.
+            Soluções que transformam como sua empresa opera, integra e inova.
           </p>
         </FadeUp>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-          {SERVICES.map((s, i) => (
-            <FadeUp key={s.title} delay={i * 0.07}>
+        {/* Bento grid: 1 large left + 2×2 right */}
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 items-stretch">
+
+          {/* Featured card */}
+          <FadeUp className="lg:col-span-1 lg:row-span-2">
+            <div
+              className="relative rounded-2xl p-8 h-full min-h-[380px] flex flex-col justify-between overflow-hidden border border-white/[0.08]"
+              style={{
+                background: "linear-gradient(145deg, #0d1f10 0%, #061009 60%, #020702 100%)",
+              }}
+            >
+              {/* orb glow */}
               <div
-                className="group p-7 rounded-2xl border border-white/[0.08] transition-all duration-300 h-full"
-                style={{ background: "rgba(255,255,255,0.025)" }}
-                onMouseEnter={e => {
-                  (e.currentTarget as HTMLDivElement).style.borderColor = `${GREEN}55`;
-                  (e.currentTarget as HTMLDivElement).style.background = `${GREEN}08`;
+                className="absolute pointer-events-none"
+                style={{
+                  top: "-20%", left: "10%",
+                  width: "80%", height: "70%",
+                  background: `radial-gradient(ellipse at center, ${GREEN}40 0%, ${GREEN}12 45%, transparent 75%)`,
+                  filter: "blur(40px)",
                 }}
-                onMouseLeave={e => {
-                  (e.currentTarget as HTMLDivElement).style.borderColor = "rgba(255,255,255,0.08)";
-                  (e.currentTarget as HTMLDivElement).style.background = "rgba(255,255,255,0.025)";
+              />
+              {/* star dots */}
+              <div
+                className="absolute inset-0 pointer-events-none opacity-40"
+                style={{
+                  backgroundImage: `radial-gradient(circle, rgba(255,255,255,0.55) 1px, transparent 1px)`,
+                  backgroundSize: "28px 28px",
+                  maskImage: "radial-gradient(ellipse at center, black 0%, transparent 80%)",
                 }}
-              >
+              />
+
+              <div className="relative z-10">
                 <div
-                  className="w-10 h-10 rounded-xl flex items-center justify-center mb-5"
-                  style={{ background: `${GREEN}18`, color: GREEN }}
+                  className="w-12 h-12 rounded-xl flex items-center justify-center mb-8"
+                  style={{ background: GREEN, color: "#000" }}
                 >
-                  {s.icon}
+                  <BrainCircuit size={22} />
                 </div>
-                <h3 className="text-lg font-bold mb-3">{s.title}</h3>
-                <p className="text-white/45 text-sm leading-relaxed">{s.desc}</p>
+                <h3 className="text-2xl font-extrabold mb-4 leading-tight" style={{ letterSpacing: "-0.02em" }}>
+                  Modernização de Legados com IA
+                </h3>
+                <p className="text-white/55 text-sm leading-relaxed">
+                  A metodologia RNC usa Inteligência Artificial para transformar sistemas legados em infraestrutura moderna. Até 70% de redução no tempo e 40–50% nos custos.
+                </p>
+              </div>
+
+              <button
+                onClick={() => scrollTo("#contato")}
+                className="relative z-10 mt-8 self-start flex items-center gap-2 px-5 py-2.5 rounded-xl font-bold text-sm transition-all hover:opacity-85"
+                style={{ background: GREEN, color: "#000" }}
+              >
+                Saber Mais <ArrowRight size={14} />
+              </button>
+            </div>
+          </FadeUp>
+
+          {/* 4 small cards — 2×2 */}
+          {[
+            {
+              icon: <UserCheck size={18} />,
+              title: "Integração de Sistemas",
+              desc: "Conecte aplicações, parceiros e dados com API Management de ponta. KrakenD, Apiable, API7 e NASPH.",
+            },
+            {
+              icon: <Settings size={18} />,
+              title: "Open Source & Cloud",
+              desc: "Suporte especializado para Kubernetes, Rancher e N8N. Sua jornada cloud livre de riscos.",
+            },
+            {
+              icon: <MessageSquare size={18} />,
+              title: "Estratégia Digital",
+              desc: "Roadmaps de transformação digital centrados no cliente, impulsionados por dados e IA.",
+            },
+            {
+              icon: <BarChart3 size={18} />,
+              title: "Segurança & Compliance",
+              desc: "Black Duck SCA para visibilidade total sobre vulnerabilidades, licenças e riscos open-source.",
+            },
+          ].map((card, i) => (
+            <FadeUp key={card.title} delay={0.1 + i * 0.07}>
+              <div
+                className="relative rounded-2xl p-7 h-full min-h-[170px] flex flex-col overflow-hidden border border-white/[0.07] transition-all duration-300 group cursor-default"
+                style={{ background: "linear-gradient(140deg, #0c1a0e 0%, #060d07 100%)" }}
+                onMouseEnter={e => (e.currentTarget as HTMLDivElement).style.borderColor = `${GREEN}44`}
+                onMouseLeave={e => (e.currentTarget as HTMLDivElement).style.borderColor = "rgba(255,255,255,0.07)"}
+              >
+                {/* subtle corner glow */}
+                <div
+                  className="absolute -top-8 -right-8 pointer-events-none opacity-0 group-hover:opacity-100 transition-opacity duration-500"
+                  style={{
+                    width: 100, height: 100,
+                    background: `radial-gradient(circle, ${GREEN}30 0%, transparent 70%)`,
+                    filter: "blur(20px)",
+                  }}
+                />
+                {/* icon */}
+                <div
+                  className="w-9 h-9 rounded-full flex items-center justify-center mb-5 border flex-shrink-0"
+                  style={{ borderColor: `${GREEN}55`, color: GREEN, background: `${GREEN}0f` }}
+                >
+                  {card.icon}
+                </div>
+                <h3 className="text-base font-bold mb-2 leading-snug">{card.title}</h3>
+                <p className="text-white/45 text-xs leading-relaxed">{card.desc}</p>
               </div>
             </FadeUp>
           ))}
