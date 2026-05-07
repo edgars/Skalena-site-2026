@@ -1,0 +1,6 @@
+{
+  "installCommand": "pnpm install --frozen-lockfile",
+  "buildCommand": "pnpm --filter @workspace/skalena run build",
+  "outputDirectory": "artifacts/skalena/dist",
+  "rewrites": [{ "source": "/(.*)", "destination": "/index.html" }]
+}
