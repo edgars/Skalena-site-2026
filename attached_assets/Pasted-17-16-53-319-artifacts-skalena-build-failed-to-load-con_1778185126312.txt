@@ -1,0 +1,36 @@
+17:16:53.319 
+artifacts/skalena build: failed to load config from /vercel/path0/artifacts/skalena/vite.config.ts
+17:16:53.321 
+artifacts/skalena build: error during build:
+17:16:53.322 
+artifacts/skalena build: Error: PORT environment variable is required but was not provided.
+17:16:53.322 
+artifacts/skalena build:     at file:///vercel/path0/artifacts/skalena/node_modules/.vite-temp/vite.config.ts.timestamp-1778185013184-3e57aa1494b34.mjs:10:9
+17:16:53.323 
+artifacts/skalena build:     at ModuleJob.run (node:internal/modules/esm/module_job:430:25)
+17:16:53.323 
+artifacts/skalena build:     at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:661:26)
+17:16:53.323 
+artifacts/skalena build:     at async loadConfigFromBundledFile (file:///vercel/path0/node_modules/.pnpm/vite@7.3.2_@types+node@25.3.5_jiti@2.6.1_lightningcss@1.31.1_tsx@4.21.0_yaml@2.8.2/node_modules/vite/dist/node/chunks/config.js:35920:12)
+17:16:53.324 
+artifacts/skalena build:     at async bundleAndLoadConfigFile (file:///vercel/path0/node_modules/.pnpm/vite@7.3.2_@types+node@25.3.5_jiti@2.6.1_lightningcss@1.31.1_tsx@4.21.0_yaml@2.8.2/node_modules/vite/dist/node/chunks/config.js:35808:17)
+17:16:53.324 
+artifacts/skalena build:     at async loadConfigFromFile (file:///vercel/path0/node_modules/.pnpm/vite@7.3.2_@types+node@25.3.5_jiti@2.6.1_lightningcss@1.31.1_tsx@4.21.0_yaml@2.8.2/node_modules/vite/dist/node/chunks/config.js:35775:42)
+17:16:53.324 
+artifacts/skalena build:     at async resolveConfig (file:///vercel/path0/node_modules/.pnpm/vite@7.3.2_@types+node@25.3.5_jiti@2.6.1_lightningcss@1.31.1_tsx@4.21.0_yaml@2.8.2/node_modules/vite/dist/node/chunks/config.js:35424:22)
+17:16:53.325 
+artifacts/skalena build:     at async createBuilder (file:///vercel/path0/node_modules/.pnpm/vite@7.3.2_@types+node@25.3.5_jiti@2.6.1_lightningcss@1.31.1_tsx@4.21.0_yaml@2.8.2/node_modules/vite/dist/node/chunks/config.js:33879:19)
+17:16:53.325 
+artifacts/skalena build:     at async CAC.<anonymous> (file:///vercel/path0/node_modules/.pnpm/vite@7.3.2_@types+node@25.3.5_jiti@2.6.1_lightningcss@1.31.1_tsx@4.21.0_yaml@2.8.2/node_modules/vite/dist/node/cli.js:629:10)
+17:16:53.337 
+artifacts/skalena build: Failed
+17:16:53.354 
+/vercel/path0/artifacts/skalena:
+17:16:53.354 
+ ERR_PNPM_RECURSIVE_RUN_FIRST_FAIL  @workspace/skalena@0.0.0 build: `vite build --config vite.config.ts`
+17:16:53.355 
+Exit status 1
+17:16:53.393 
+ ELIFECYCLE  Command failed with exit code 1.
+17:16:53.412 
+Error: Command "pnpm run build" exited with 1
