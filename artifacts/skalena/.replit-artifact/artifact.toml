@@ -1,0 +1,31 @@
+kind = "web"
+previewPath = "/"
+title = "Skalena"
+version = "1.0.0"
+id = "artifacts/skalena"
+router = "path"
+
+[[integratedSkills]]
+name = "react-vite"
+version = "1.0.0"
+
+[[services]]
+name = "web"
+paths = [ "/" ]
+localPort = 21241
+
+[services.development]
+run = "pnpm --filter @workspace/skalena run dev"
+
+[services.production]
+build = [ "pnpm", "--filter", "@workspace/skalena", "run", "build" ]
+publicDir = "artifacts/skalena/dist/public"
+serve = "static"
+
+[[services.production.rewrites]]
+from = "/*"
+to = "/index.html"
+
+[services.env]
+PORT = "21241"
+BASE_PATH = "/"
