@@ -127,6 +127,7 @@ export default function TeamPage() {
         label="Nossa Equipe"
         title={<>Pessoas que fazem a<br /><span style={{ color: GREEN }}>diferença</span></>}
         subtitle="Time multidisciplinar de especialistas apaixonados por tecnologia, inovação e pelo impacto real que geramos para nossos clientes."
+        crumbs={[{ label: "Equipe" }]}
       />
 
       {/* Department stats */}

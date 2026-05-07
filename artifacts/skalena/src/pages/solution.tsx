@@ -70,17 +70,11 @@ export default function SolutionPage() {
           </>
         }
         subtitle={solution.subtitle}
+        crumbs={[
+          { label: "Soluções", href: `${base}/solucoes-detalhes` },
+          { label: solution.shortTitle },
+        ]}
       />
-
-      {/* Back link */}
-      <div className="max-w-6xl mx-auto px-6 pt-8 pb-0">
-        <button
-          onClick={() => navigate(`${base}/solucoes-detalhes`)}
-          className="flex items-center gap-2 text-sm text-white/40 hover:text-white transition-colors"
-        >
-          <ArrowLeft size={14} /> Todas as soluções
-        </button>
-      </div>
 
       {/* Overview */}
       <section className="py-14 max-w-6xl mx-auto px-6">

@@ -1,4 +1,5 @@
 import { HeroCanvas } from "@/components/hero-canvas";
+import { Breadcrumb, type Crumb } from "@/components/breadcrumb";
 
 const GREEN = "#0cfa64";
 
@@ -6,9 +7,10 @@ interface PageHeroProps {
   label: string;
   title: React.ReactNode;
   subtitle?: string;
+  crumbs?: Crumb[];
 }
 
-export function PageHero({ label, title, subtitle }: PageHeroProps) {
+export function PageHero({ label, title, subtitle, crumbs }: PageHeroProps) {
   return (
     <section
       className="relative w-full flex flex-col items-center justify-center text-center overflow-hidden"
@@ -28,6 +30,12 @@ export function PageHero({ label, title, subtitle }: PageHeroProps) {
       />
 
       <div className="relative z-10 max-w-4xl mx-auto px-6 py-16 flex flex-col items-center">
+        {crumbs && crumbs.length > 0 && (
+          <div className="mb-6">
+            <Breadcrumb crumbs={crumbs} />
+          </div>
+        )}
+
         <div
           className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-xs font-semibold mb-7 border"
           style={{ background: `${GREEN}18`, borderColor: `${GREEN}44`, color: GREEN }}

@@ -68,6 +68,7 @@ export default function FounderPage() {
         label="Nosso Fundador"
         title={<>Movido por propósito<br />e <span style={{ color: GREEN }}>inovação</span></>}
         subtitle="A história de quem acreditou que o Brasil poderia criar tecnologia de classe mundial."
+        crumbs={[{ label: "Fundador" }]}
       />
 
       {/* Profile */}

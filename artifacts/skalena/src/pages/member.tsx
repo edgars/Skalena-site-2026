@@ -2,6 +2,7 @@ import { useParams, useLocation } from "wouter";
 import { motion } from "framer-motion";
 import { Navbar } from "@/components/navbar";
 import { Footer } from "@/components/footer";
+import { Breadcrumb } from "@/components/breadcrumb";
 import { getMember } from "@/data/team";
 import { Linkedin, Github, ArrowLeft, CheckCircle2 } from "lucide-react";
 
@@ -58,12 +59,14 @@ export default function MemberPage() {
           }}
         />
         <div className="relative z-10 max-w-5xl mx-auto px-6">
-          <button
-            onClick={() => navigate(`${base}/equipe`)}
-            className="flex items-center gap-2 text-sm text-white/40 hover:text-white transition-colors mb-10"
-          >
-            <ArrowLeft size={15} /> Equipe
-          </button>
+          <div className="mb-8">
+            <Breadcrumb
+              crumbs={[
+                { label: "Equipe", href: `${base}/equipe` },
+                { label: member.name },
+              ]}
+            />
+          </div>
 
           <div className="flex flex-col sm:flex-row gap-10 items-start sm:items-center">
             <div className="relative flex-shrink-0">

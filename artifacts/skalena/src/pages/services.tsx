@@ -43,6 +43,7 @@ export default function ServicesPage() {
         label="Soluções"
         title={<>Tudo que sua empresa<br />precisa para <span style={{ color: GREEN }}>escalar</span></>}
         subtitle="Portfólio completo de soluções tecnológicas — da modernização de legados à estratégia digital — para empresas que querem liderar."
+        crumbs={[{ label: "Soluções" }]}
       />
 
       {/* Services list */}

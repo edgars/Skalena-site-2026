@@ -3,6 +3,7 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { Toaster } from "@/components/ui/toaster";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { ScrollToTop } from "@/components/scroll-to-top";
+import { BackToTop } from "@/components/back-to-top";
 
 import IndexPage from "@/pages/index";
 import TeamPage from "@/pages/team";
@@ -37,6 +38,7 @@ function App() {
       <TooltipProvider>
         <WouterRouter base={import.meta.env.BASE_URL.replace(/\/$/, "")}>
           <Router />
+          <BackToTop />
         </WouterRouter>
         <Toaster />
       </TooltipProvider>

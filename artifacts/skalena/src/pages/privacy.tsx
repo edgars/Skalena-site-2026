@@ -45,6 +45,7 @@ export default function PrivacyPage() {
         label="Legal"
         title={<>Política de <span style={{ color: GREEN }}>Privacidade</span></>}
         subtitle="Transparência sobre como coletamos, usamos e protegemos suas informações."
+        crumbs={[{ label: "Política de Privacidade" }]}
       />
 
       <section className="py-20 max-w-3xl mx-auto px-6">
