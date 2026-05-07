@@ -1,6 +1,7 @@
 import { ReactNode } from "react";
 import { Navbar } from "./navbar";
 import { Footer } from "./footer";
+import { Analytics } from "@vercel/analytics/next"
 
 export function Layout({ children }: { children: ReactNode }) {
   return (
