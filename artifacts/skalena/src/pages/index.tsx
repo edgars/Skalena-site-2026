@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import { Navbar } from "@/components/navbar";
 import { Footer } from "@/components/footer";
 import { HeroCanvas } from "@/components/hero-canvas";
+import { LogoCarousel } from "@/components/logo-carousel";
 import { Code2, Layers, Cpu, ShieldCheck, Zap, Globe, ArrowRight, CheckCircle2, UserCheck, Settings, MessageSquare, BarChart3, BrainCircuit } from "lucide-react";
 
 const GREEN = "#0cfa64";
@@ -85,11 +86,6 @@ const VALUES = [
   },
 ];
 
-const CLIENTS = [
-  "Embrapa", "Petrobras", "Banco do Brasil",
-  "Serpro", "Caixa Econômica", "Totvs",
-  "Stefanini", "CI&T", "Senior Sistemas",
-];
 
 const BLACKDUCK_FEATURES = [
   "Escaneamento estático (SAST) de código e IaC",
@@ -495,18 +491,9 @@ export default function IndexPage() {
             </p>
           </FadeUp>
 
-          <div className="grid grid-cols-2 sm:grid-cols-3 gap-3 mb-10">
-            {CLIENTS.map((c, i) => (
-              <FadeUp key={c} delay={i * 0.05}>
-                <div
-                  className="py-5 px-6 rounded-xl border border-white/[0.07] flex items-center justify-center text-center transition-all duration-200 hover:border-white/20 cursor-default"
-                  style={{ background: "rgba(255,255,255,0.03)" }}
-                >
-                  <span className="text-sm font-semibold text-white/70">{c}</span>
-                </div>
-              </FadeUp>
-            ))}
-          </div>
+          <FadeUp className="mb-10">
+            <LogoCarousel />
+          </FadeUp>
 
           <FadeUp>
             <div

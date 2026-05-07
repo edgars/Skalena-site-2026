@@ -4,12 +4,18 @@ import { Toaster } from "@/components/ui/toaster";
 import { TooltipProvider } from "@/components/ui/tooltip";
 
 import IndexPage from "@/pages/index";
+import TeamPage from "@/pages/team";
+import FounderPage from "@/pages/founder";
+import ServicesPage from "@/pages/services";
 
 const queryClient = new QueryClient();
 
 function Router() {
   return (
     <Switch>
+      <Route path="/equipe" component={TeamPage} />
+      <Route path="/fundador" component={FounderPage} />
+      <Route path="/solucoes-detalhes" component={ServicesPage} />
       <Route path="*" component={IndexPage} />
     </Switch>
   );
