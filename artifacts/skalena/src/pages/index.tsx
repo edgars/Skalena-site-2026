@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
+import { useLocation } from "wouter";
 import { Navbar } from "@/components/navbar";
 import { Footer } from "@/components/footer";
 import { HeroCanvas } from "@/components/hero-canvas";
@@ -96,6 +97,8 @@ const BLACKDUCK_FEATURES = [
 
 export default function IndexPage() {
   const [formStatus, setFormStatus] = useState<"idle" | "success">("idle");
+  const [, navigate] = useLocation();
+  const base = import.meta.env.BASE_URL.replace(/\/$/, "");
 
   const scrollTo = (id: string) => {
     const el = document.querySelector(id);
@@ -395,16 +398,17 @@ export default function IndexPage() {
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-px" style={{ background: "rgba(255,255,255,0.06)" }}>
             {[
-              { id: "01", title: "RNC", desc: "Reengineering New Code para legados complexos com IA." },
-              { id: "02", title: "Open Source", desc: "Suporte e integração com o melhor do ecossistema livre." },
-              { id: "03", title: "Estratégia Digital", desc: "Jornadas mapeadas para máximo impacto e crescimento." },
-              { id: "04", title: "API Management", desc: "Controle total sobre dados, integrações e governança." },
-              { id: "05", title: "Black Duck", desc: "Auditoria e compliance de software em tempo real." },
-              { id: "06", title: "Design & UX", desc: "Interfaces projetadas para o comportamento humano." },
+              { id: "01", title: "RNC", slug: "rnc", desc: "Reengineering New Code para legados complexos com IA." },
+              { id: "02", title: "API Management", slug: "api-management", desc: "Controle total sobre dados, integrações e governança." },
+              { id: "03", title: "Black Duck", slug: "black-duck", desc: "Auditoria e compliance de software em tempo real." },
+              { id: "04", title: "Open Source", slug: "open-source", desc: "Suporte e integração com o melhor do ecossistema livre." },
+              { id: "05", title: "Design & UX", slug: "design-ux", desc: "Interfaces projetadas para o comportamento humano." },
+              { id: "06", title: "Estratégia Digital", slug: "estrategia-digital", desc: "Jornadas mapeadas para máximo impacto e crescimento." },
             ].map((item, i) => (
               <FadeUp key={item.id} delay={i * 0.06}>
                 <div
-                  className="bg-black p-8 group cursor-default transition-all duration-200 hover:bg-white/[0.03]"
+                  className="bg-black p-8 group cursor-pointer transition-all duration-200 hover:bg-white/[0.03]"
+                  onClick={() => navigate(`${base}/solucoes/${item.slug}`)}
                 >
                   <div
                     className="text-xs font-bold mb-4 opacity-40 group-hover:opacity-80 transition-opacity"
@@ -418,7 +422,13 @@ export default function IndexPage() {
                   >
                     {item.title}
                   </h3>
-                  <p className="text-white/40 text-sm leading-relaxed">{item.desc}</p>
+                  <p className="text-white/40 text-sm leading-relaxed mb-4">{item.desc}</p>
+                  <span
+                    className="flex items-center gap-1 text-xs font-bold opacity-0 group-hover:opacity-100 transition-all duration-200"
+                    style={{ color: GREEN }}
+                  >
+                    Ver detalhes <ArrowRight size={11} />
+                  </span>
                 </div>
               </FadeUp>
             ))}
