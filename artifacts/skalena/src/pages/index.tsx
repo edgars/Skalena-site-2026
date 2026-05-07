@@ -204,7 +204,7 @@ export default function IndexPage() {
             { num: "50%", label: "Melhoria na Qualidade do Código" },
             { num: "35%", label: "Redução nos Custos de Desenvolvimento" },
           ].map(({ num, label }) => (
-            <FadeUp key={num} className="px-10 py-14 flex flex-col items-center text-center sm:items-start sm:text-left">
+            <FadeUp key={num} className="px-6 py-10 sm:px-10 sm:py-14 flex flex-col items-center text-center sm:items-start sm:text-left">
               <span
                 className="text-6xl font-extrabold mb-3 leading-none"
                 style={{ color: GREEN }}
@@ -218,7 +218,7 @@ export default function IndexPage() {
       </section>
 
       {/* ── SERVIÇOS BENTO ── */}
-      <section id="servicos" className="py-28 max-w-7xl mx-auto px-6">
+      <section id="servicos" className="py-16 sm:py-24 max-w-7xl mx-auto px-6">
         <FadeUp className="text-center mb-14">
           <SectionLabel>Serviços</SectionLabel>
           <h2
@@ -343,7 +343,7 @@ export default function IndexPage() {
       </section>
 
       {/* ── SOBRE ── */}
-      <section id="sobre" className="py-28 border-t border-white/[0.07]">
+      <section id="sobre" className="py-16 sm:py-24 border-t border-white/[0.07]">
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-14 lg:gap-24 items-start">
             <FadeUp>
@@ -381,7 +381,7 @@ export default function IndexPage() {
       </section>
 
       {/* ── SOLUÇÕES HUB ── */}
-      <section id="solucoes" className="py-28 border-t border-white/[0.07]" style={{ background: "rgba(255,255,255,0.012)" }}>
+      <section id="solucoes" className="py-16 sm:py-24 border-t border-white/[0.07]" style={{ background: "rgba(255,255,255,0.012)" }}>
         <div className="max-w-7xl mx-auto px-6">
           <FadeUp className="text-center mb-16">
             <SectionLabel>Soluções</SectionLabel>
@@ -427,7 +427,7 @@ export default function IndexPage() {
       </section>
 
       {/* ── BLACK DUCK ── */}
-      <section id="blackduck" className="py-28 border-t border-white/[0.07]">
+      <section id="blackduck" className="py-16 sm:py-24 border-t border-white/[0.07]">
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-14 lg:gap-20 items-center">
             <FadeUp>
@@ -476,7 +476,7 @@ export default function IndexPage() {
       </section>
 
       {/* ── CLIENTES ── */}
-      <section id="clientes" className="py-28 border-t border-white/[0.07]" style={{ background: "rgba(255,255,255,0.012)" }}>
+      <section id="clientes" className="py-16 sm:py-24 border-t border-white/[0.07]" style={{ background: "rgba(255,255,255,0.012)" }}>
         <div className="max-w-7xl mx-auto px-6">
           <FadeUp className="text-center mb-14">
             <SectionLabel>Clientes</SectionLabel>
@@ -515,7 +515,7 @@ export default function IndexPage() {
       </section>
 
       {/* ── CONTATO ── */}
-      <section id="contato" className="py-28 border-t border-white/[0.07]">
+      <section id="contato" className="py-16 sm:py-24 border-t border-white/[0.07]">
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-14 lg:gap-20 items-start">
             <FadeUp>
