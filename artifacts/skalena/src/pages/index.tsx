@@ -446,7 +446,7 @@ export default function IndexPage() {
                 className="font-extrabold mb-5 leading-[1.1]"
                 style={{ fontSize: "clamp(28px, 4.5vw, 50px)", letterSpacing: "-0.025em" }}
               >
-                Advisory
+                Advisory/ps
               </h2>
 
               <p

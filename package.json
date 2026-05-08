@@ -13,7 +13,6 @@
   ],
   "scripts": {
     "dev": "npm run dev --workspace @workspace/skalena",
-    "dev:api": "npm run dev --workspace @workspace/api-server",
     "build": "npm run build --workspace @workspace/skalena",
     "build:all": "npm run typecheck && npm run build --workspaces --if-present",
     "codegen": "npm run codegen --workspace @workspace/api-spec",
