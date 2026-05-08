@@ -1,6 +1,6 @@
 {
   "$schema": "https://openapi.vercel.sh/vercel.json",
-  "installCommand": "npm install",
+  "installCommand": "npx npm@10.9.1 install",
   "buildCommand": "npm run build",
   "outputDirectory": "artifacts/skalena/dist",
   "rewrites": [{ "source": "/(.*)", "destination": "/index.html" }]
