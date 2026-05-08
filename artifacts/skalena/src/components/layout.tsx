@@ -10,6 +10,7 @@ export function Layout({ children }: { children: ReactNode }) {
       <main className="flex-1">
         {children}
       </main>
+        <Analytics />
       <Footer />
     </div>
   );
