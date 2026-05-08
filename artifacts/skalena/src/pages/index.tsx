@@ -441,21 +441,22 @@ export default function IndexPage() {
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-14 lg:gap-20 items-center">
             <FadeUp>
-              <SectionLabel>Segurança</SectionLabel>
+              <SectionLabel>Venture Builder</SectionLabel>
               <h2
                 className="font-extrabold mb-5 leading-[1.1]"
                 style={{ fontSize: "clamp(28px, 4.5vw, 50px)", letterSpacing: "-0.025em" }}
               >
-                Black Duck
+                Advisory
               </h2>
+
               <p
                 className="font-semibold mb-4"
                 style={{ fontSize: "clamp(16px, 2vw, 20px)", color: "rgba(255,255,255,0.7)" }}
               >
-                Segurança e Compliance para qualquer software
+                Value Proposition: Business Transformation & Scale Advisory
               </p>
               <p className="text-white/40 text-sm leading-relaxed mb-8">
-                Plataforma SCA líder global que oferece visibilidade completa sobre componentes open-source, vulnerabilidades e riscos de licenciamento. Ideal para DevSecOps, auditorias e operações em nuvem.
+                Atuamos como um parceiro estratégico end-to-end, preenchendo a lacuna entre a visão dos fundadores e a execução operacional. Nosso foco é a construção de uma máquina de crescimento previsível, garantindo que a tecnologia e os processos não sejam um custo, mas um diferencial competitivo.
               </p>
               <button
                 onClick={() => scrollTo("#contato")}

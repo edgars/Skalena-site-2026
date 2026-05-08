@@ -25,7 +25,7 @@ export default function BlackDuck() {
           <FadeIn>
             <h2 className="text-3xl font-bold mb-12 text-center">Principais Funcionalidades</h2>
           </FadeIn>
-          
+
           <StaggerContainer className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             <StaggerItem>
               <div className="bg-background border border-white/10 rounded-3xl p-8 h-full hover:border-primary/40 transition-colors flex flex-col items-start text-left">

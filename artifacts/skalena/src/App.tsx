@@ -13,7 +13,7 @@ import ServicesPage from "@/pages/services";
 import SolutionPage from "@/pages/solution";
 import MemberPage from "@/pages/member";
 import PrivacyPage from "@/pages/privacy";
-import { Analytics } from '@vercel/analytics/next';
+
 
 const queryClient = new QueryClient();
 
@@ -30,7 +30,7 @@ function Router() {
         <Route path="/privacidade" component={PrivacyPage} />
         <Route path="*" component={IndexPage} />
       </Switch>
-        <Analytics />
+
     </>
   );
 }
