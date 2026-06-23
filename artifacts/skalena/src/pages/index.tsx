@@ -89,10 +89,10 @@ const VALUES = [
 
 
 const BLACKDUCK_FEATURES = [
-  "Escaneamento estático (SAST) de código e IaC",
-  "Análise de composição de software (SCA)",
-  "Scans dinâmicos para aplicações Web e APIs",
-  "Automação completa no CI/CD e em produção",
+  "GTM (Go-To-Market) & Sales Excellence",
+  "Marketing Estratégico & Demand Gen",
+  "CTO as a Service & Tech Roadmap",
+  "Operações, Revisão de Finanças e Investimentos",
 ];
 
 export default function IndexPage() {
@@ -437,7 +437,7 @@ export default function IndexPage() {
       </section>
 
       {/* ── BLACK DUCK ── */}
-      <section id="blackduck" className="py-16 sm:py-24 border-t border-white/[0.07]">
+      <section id="advisory" className="py-16 sm:py-24 border-t border-white/[0.07]">
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-14 lg:gap-20 items-center">
             <FadeUp>
@@ -446,14 +446,14 @@ export default function IndexPage() {
                 className="font-extrabold mb-5 leading-[1.1]"
                 style={{ fontSize: "clamp(28px, 4.5vw, 50px)", letterSpacing: "-0.025em" }}
               >
-                Advisory/ps
+                Advisory
               </h2>
 
               <p
                 className="font-semibold mb-4"
                 style={{ fontSize: "clamp(16px, 2vw, 20px)", color: "rgba(255,255,255,0.7)" }}
               >
-                Value Proposition: Business Transformation & Scale Advisory
+                Escala e transformação de negócios de Empresas e Startups
               </p>
               <p className="text-white/40 text-sm leading-relaxed mb-8">
                 Atuamos como um parceiro estratégico end-to-end, preenchendo a lacuna entre a visão dos fundadores e a execução operacional. Nosso foco é a construção de uma máquina de crescimento previsível, garantindo que a tecnologia e os processos não sejam um custo, mas um diferencial competitivo.

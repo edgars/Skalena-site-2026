@@ -9,7 +9,7 @@ const HASH_LINKS = [
   { href: "#sobre", label: "Sobre" },
   { href: "#servicos", label: "Serviços" },
   { href: "#clientes", label: "Clientes" },
-  { href: "#blackduck", label: "Black Duck" },
+  { href: "#advisory", label: "Advisory" },
   { href: "#contato", label: "Contato" },
 ];
 
